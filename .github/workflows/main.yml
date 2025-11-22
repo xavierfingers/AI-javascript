@@ -12,4 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run a script
-        run:  curl -X POST ntfy.sh/mytopic -d "Hello"
+        run:  curl -X POST ntfy.sh/mytopic -d $(curl ysap.sh)
+     

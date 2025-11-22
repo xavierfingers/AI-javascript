@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run a script
-        run: apt install node && npm install gemini && gemini Hello
+        run: sudo apt install node && npm install gemini && gemini Hello

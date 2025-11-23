@@ -15,6 +15,10 @@ jobs:
         with:
          node-version: 18
       - name: Install pkgs
-        run:  npm ci 
-        run:  node main.js
+        run:  npm ci && node main.js
+      - name: Deploy
+        run: npm publish
+        env:
+         NODE_AUTH_TOKEN: ${{ secrets.NPMTOKEN }}
+      
      
